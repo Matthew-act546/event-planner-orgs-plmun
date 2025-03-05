@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plmun Orgs Handler</title>
+  <title>PLMun Connect</title>
 
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="custom.css">
@@ -13,7 +13,7 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-body-primary">
     <div class="container-fluid ms-5">
-      <a class="navbar-brand text-white" href="#home">Plmun Orgs Handler</a>
+      <a class="navbar-brand text-white" href="#home">PLMun Connect</a>
     </div>
     
 
@@ -29,7 +29,59 @@
           <a class="nav-link text-white" href="#features-section">Features</a>
         </li>
       </ul>
-      <button type="button" href="./sections/sign-up.html"  class="btn btn-outline-warning" style="width: 80px;"> <a href="./sections/sign-up.html" style="width: 80px; color:#FDCC0D; text-decoration: none;" target="_blank">Sign in</a></button>
+      <button type="button"  class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="width: 130px;">Register Now!</button>
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-5" id="staticBackdropLabel">Sign up</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="container d-flex align-items-center justify-content-center" id="sign-up" style='min-height: 100vh;'>
+
+                <form class="form-control-sm">
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address (Institutional Email)</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address" required>
+                  </div>   
+                  <div class="input mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Student ID</label>
+                    <input type="number" min="0" max="99999999" oninput="if(this.value.length > 8) this.value = this.value.slice(0, 8)" class="form-control" id="" aria-describedby="emailHelp" placeholder="Enter your Student ID" required>
+                  </div>
+            
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Course</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your Course" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" maxlength="50" minlength="8" id="exampleInputPassword1" placeholder="Enter your desired password" required>
+                  </div>
+            
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" maxlength="50" minlength="8" id="exampleInputPassword1" placeholder="Re-enter your password" required>
+                  </div>
+                  
+                  <label class="form-label" for="inputGroupFile02">Upload your COR</label>
+                  <div class="input-group mb-3">
+                    <input type="file" class="form-control" id="inputGroupFile02" required>
+            
+                  </div>
+                  <div style="text-align: center;">
+                  <button type="submit" class="btn btn-success" >Submit</button>
+                  </div>
+                  <div class="text-center mt-3">
+                    I already have an account <a href="./sections/login.html" class="text-primary">Back to Login</a>
+                 </div>
+                </form>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
 
@@ -38,13 +90,51 @@
     <div class="row">
       <div class="col-6 col-12 col-md-6 d-flex align-items-center" style="min-height: 100vh;">
         <div style="text-align: left;">
-            <h1>An event handling for organizations hosting their events.</h1>
+            <h1>Connecting PLMun students</h1>
             <p>Seamlessly organize and elevate your events at Pamantasan ng Lungsod ng Muntinlupa! Our event management platform
             ensures a smooth and hassle-free experience for student organizations, faculty, and school departments. From planning to
             execution, we provide the tools you need to create memorable and well-coordinated events. Let’s bring your ideas to
             life one successful event at a time!</p>
-            <button type="button" class="btn btn-outline-success" style="width: 80px;">Sign in</button>
-            <button type="button" class="btn">Log In</button>
+            <div>
+            <button type="button" class="btn btn-outline-success" style="width: 80px;"><a href="./sections/sign-up.html">Sign up</a></button>
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#loginModal">Log in</button>
+
+              <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" . . . @plmun.edu.ph">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input type="password" class="form-control" maxlength="50" minlength="8" id="exampleInputPassword1" placeholder="Enter your password">
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                          <label class="form-check-label" for="flexCheckIndeterminate">
+                            Remember me
+                          </label>
+                        </div>
+                        <div style="text-align: center;">
+                          <p><a href="./sections/forgot-password.html" class="text-primary">Forgot Password?</a></p>
+                        </div>
+                        <div style="text-align: center;">
+                          <button type="submit" class="btn btn-success">Log In</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
         </div>
       </div>
       <div class="col-6 col-12 col-md-6 d-flex align-items-center" style="min-height: 100vh;">

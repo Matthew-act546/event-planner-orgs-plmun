@@ -6,8 +6,9 @@
 .bg-body-primary {
     background-color: var(--primary-color) !important;
 }
-
-
+.no-border {
+    border: none !important;
+}
 /* .card {
     width: 50%;
 } */
