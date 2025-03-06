@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PLMun Connect</title>
-
+  <link rel="icon" type="image/png" href="./assets/images/Logo.png">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="custom.css">
   <script src="assets/js/bootstrap.bundle.min.js" defer></script>
@@ -12,15 +12,19 @@
 
 <body>
   <nav class="navbar navbar-expand-lg bg-body-primary">
-    <div class="container-fluid ms-5">
-      <a class="navbar-brand text-white" href="#home"><img src="./assets/images/Logo.png" style="height: 50px;"> PLMun Connect</a>
-    </div>
-    
+    <div class="container-fluid d-flex align-items-center justify-content-between ms-3">
+      <a class="navbar-brand text-white" href="#home">
+        <img src="./assets/images/Logo.png" style="height: 50px;">PLMun Connect</a>
 
-    <div class="collapse navbar-collapse me-5">
-      <ul class="navbar-nav me-3">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse me-5" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active text-white"  href="#home">Home</a>
+          <a class="nav-link active text-white" href="#home">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#about-section">About</a>
@@ -29,7 +33,9 @@
           <a class="nav-link text-white" href="#features-section">Features</a>
         </li>
       </ul>
-      <button type="button"  class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="width: 130px;">Register Now!</button>
+      <div class="d-flex align-items-center">
+      <button type="button"  class="btn btn-outline-warning ms-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="width: 130px;">Register Now!</button>
+      </div>
       <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -88,15 +94,16 @@
 
   <div id="home" class="container text-center">
     <div class="row">
-      <div class="col-6 col-12 col-md-6 d-flex align-items-center" style="min-height: 100vh;">
+      <div class="col-6 col-12 col-md-6 d-flex align-items-center" style="min-height: 60vh;">
         <div style="text-align: left;">
-            <h1>Connecting PLMun students</h1>
+            <h2>Connecting PLMun students✨</h2>
             <p class="text-justify">Seamlessly organize and elevate your events at Pamantasan ng Lungsod ng Muntinlupa! Our event management platform
             ensures a smooth and hassle-free experience for student organizations, faculty, and school departments. From planning to
             execution, we provide the tools you need to create memorable and well-coordinated events. Let’s bring your ideas to
             life one successful event at a time!</p>
             <div>
-            <button type="button" class="btn btn-outline-success" style="width: 80px;"><a href="./sections/sign-up.html">Sign up</a></button>
+            <button type="button" class="btn btn-outline-success txt-bypass" style="width: 80px;"><a href="./sections/sign-up.html"
+                class="txt-bypass" style="text-decoration: none;">Sign up</a></button> <!-- !22 -->
             <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#loginModal">Log in</button>
 
               <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -134,14 +141,13 @@
                 </div>
               </div>
             </div>
-           </div>
-      </div>
-      <div class="col-6 col-12 col-md-6 d-flex align-items-center" style="min-height: 100vh;">
-        <div id="wer" class="card d-inline-block">
-          <div class="card-body ">
-            <img src="./assets/images/PLMunBuilding.jpeg" class="card-img-top img-fluid" alt="a photo of PLMun Building">
-            <img src="./assets/images/pin-1.jpg" style="height: 27px; width: 24px;"><p> University Road NBP Reservation Brgy. Poblacion, <br> City of Muntinlupa. Philippines, 1776</p>
           </div>
+      </div>
+      <div class="col-6 col-12 col-md-6 d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+        <div class="d-inline-block ">
+          <img src="./assets/images/PLMunBuilding.jpeg" class="card-img-top img-fluid"
+            style="width: 380px; height: 405px; border: 1px solid transparent; border-radius: 15%; box-shadow: 10px 10px 20px rgba(0, 128, 0, 0.6);"
+            alt="a photo of PLMun Building"> <!-- !11 -->
         </div>
       </div>
     </div>
@@ -166,13 +172,13 @@
 
 
   <div id="about-section" class="about" style="min-height: 100vh;">
-      <h1 class="text-center">About us</h1>
+    <h1 class="text-center mb-4">About us</h1>
     <div class="container">
       <div class="row">
         <div class="col-md-5">
           
             <div id="wer" class="card d-inline-block">
-              <div class="card-body ">
+              <div class="card-body my-3">
                 <img src="./assets/images/about1.png" class="card-img-top img-fluid" alt="our picture together with our proffessor Mrs. Umali">
                 <p class="card-text">
                   We are <b>Matthew, Lawrence, James, and Illannah,</b> students from <b>BSCS-1B</b> at Pamantasan ng Lungsod ng
@@ -193,55 +199,105 @@
                 </p>
               </div>
             </div>
-          
         </div>
 
-
-        <div class="col-md-7">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="card" style="width: 18rem">
-                <img src="..." class="card-img-top" alt="...">
+        <div class="col-md-6">
+          <div class="row g-4">
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="card mx-auto my-3" >
+                <div class="d-flex justify-content-center">
+                  <img src="./assets/images/matthew.jpg" class="mt-3" style="height: 150px; width: 150px;" alt="matthew image">
+                </div>
                 <div class="card-body">
-                  <p class="card-text">Matthew David C. Fernandez</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card" style="width: 18rem;">
-                <img src="./assets/images/Lawrence.jpg" style="height: 100px; width: 100px; border: 2px;" class="card-img-top" alt="Lawrence's picture">
-                <div class="card-body">              
-                  <p class="card-text">Lawrence John S. Alibangbang</p>
-                  <p>Role : Front End Developer</p>
-                  <p>Facebook : <a href="https://www.facebook.com/Laaawrence">Lawrence</a></p>
-                  <p>Github : <a href="https://github.com/faaarbeyond">faaarbeyond</a></p>
-                  <p>Gmail : faaarbeyond@gmail.com</p>
-                </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row mt-3">
-              <div class="col-md-6">
-                <div class="card" style="width: 18rem">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">James Lawrenz Duquilar</p>
+                  <p class="card-text text-center">Matthew David C. Fernandez <br> Full-stack Web Developer</p>
+                  <div class="d-flex justify-content-center">
+                    <a href="https://www.facebook.com/Matthew.act546" style="text-decoration: none;">
+                      <img src="assets/images/fb-logo.png" class="ms-1 tex" style="width: 30px; height: 30px;" alt="Logo">
+                    </a>
+                    <a href="https://github.com/Matthew-act546" style="text-decoration: none;">
+                      <img src="assets/images/github.png" class="ms-1" style="width: 28px; height: 28px;" alt="Logo">
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=matthewyt765@gmail.com" style="text-decoration: none;">
+                      <img src="assets/images/email.jpeg" class="ms-1" style="width: 35px; height: 30px;" alt="Logo">
+                    </a>
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="card" style="width: 18rem;">
-                  <img src="./assets/images/illanah.jpg" style="height: 100px; width: 100px; border: 2px;" class="card-img-top" alt="photo of Illannah">
-                  <div class="card-body">
-                    <p class="card-text">Illannah Rayne Cervantes</p>
-                    <p>Role : UI & UX Designer</p>
-                    <p>Facebook : <a href="https://www.facebook.com/illannah.mendoza.cervantes">Illanah Mendoza Cervantes</a></p>
-                    <p>Github : <a href="https://github.com/Cillannah">Cillannah</a></p>
-                    <p>Gmail : Illannahc@gmail.com</p>
+            </div>
+        
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="card mx-auto my-3">
+                <div class="d-flex justify-content-center">
+                  <img src="./assets/images/Lawrence.jpg" class="mt-3" style="height: 150px; width: 150px;"
+                    alt="Lawrence image">
+                </div>
+                <div class="card-body">
+                  <p class="card-text text-center">Lawrence John S. Alibangbang <br> Front-end Developer</p>
+                  <div class="d-flex justify-content-center">
+                  <a href="https://www.facebook.com/Laaawrence" style="text-decoration: none;">
+                    <img src="assets/images/fb-logo.png" class="ms-1" style="width: 30px; height: 30px;" alt="Logo">
+                  </a>
+                  <a href="https://github.com/faaarbeyond" style="text-decoration: none;">
+                    <img src="assets/images/github.png" class="ms-1" style="width: 28px; height: 28px;" alt="Logo">
+                  </a>
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=matthewyt765@gmail.com" style="text-decoration: none;">
+                    <img src="assets/images/email.jpeg" class="ms-1" style="width: 35px; height: 30px;" alt="Logo">
                   </div>
+                  </a>
                 </div>
               </div>
+            </div>
+          </div>
+        
+          <div class="row g-4">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                  <div class="card mx-auto my-3">
+                    <div class="d-flex justify-content-center">
+                      <img src="./assets/images/duquilar.jpg" class="mt-3" style="height: 150px; width: 150px;"
+                        alt="James image">
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text text-center">James Lawrenz Duquilar<br> Back-end Developer</p>
+                      <div class="d-flex justify-content-center">
+                      <a href="https://www.facebook.com/james.duquilar" style="text-decoration: none;">
+                        <img src="assets/images/fb-logo.png" class="ms-1" style="width: 30px; height: 30px;" alt="Logo">
+                      </a>
+                      <a href="https://github.com/Yuri-Guro" style="text-decoration: none;">
+                        <img src="assets/images/github.png" class="ms-1" style="width: 28px; height: 28px;" alt="Logo">
+                      </a>
+                      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jamesduquilar0128@gmail.com" style="text-decoration: none;">
+                        <img src="assets/images/email.jpeg" class="ms-1" style="width: 35px; height: 30px;" alt="Logo">
+                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="col-lg-6 col-md-6 col-12">
+                  <div class="card mx-auto my-3" style="margin-top: 20px; ">
+                    <div class="d-flex justify-content-center">
+                      <img src="./assets/images/illanah.jpg" class="mt-3" style="height: 150px; width: 150px;"
+                        alt="Illanah image">
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text text-center">Illannah Rayne Cervantes<br> UI & UX Designer</p>
+                      <div class="d-flex justify-content-center">
+                      <a href="https://www.facebook.com/illannah.mendoza.cervantes" style="text-decoration: none;">
+                        <img src="assets/images/fb-logo.png" class="ms-1" style="width: 30px; height: 30px;" alt="Logo">
+                      </a>
+                      <a href="https://github.com/Cillannah" style="text-decoration: none;">
+                        <img src="assets/images/github.png" class="ms-1" style="width: 28px; height: 28px;" alt="Logo">
+                      </a>
+                      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Illannahc@gmail.com" style="text-decoration: none;">
+                        <img src="assets/images/email.jpeg" class="ms-1" style="width: 35px; height: 30px;" alt="Logo">
+                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div> 
             </div>
           </div>
         </div>
@@ -268,10 +324,10 @@
   </svg>
 
   <div id="features-section" style="min-height: 100vh; text-align: center;">
-    <h1>Features  </h1>
-    <div class="container mt-5">
+    <h1>Features</h1>
+    <div class="container mt-4">
       <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6 my-3">
               <div class="card">
                   <div class="card-body">
                     <img src="./assets/images/Host.png" class="card-img-top img-fluid" style="height: 100px; width: 80px;" alt="a photo of calendar">
@@ -291,7 +347,7 @@
                   </div>
               </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 my-3">
               <div class="card">
                   <div class="card-body">
                     <img src="./assets/images/attendees.png" class="card-img-top img-fluid" style="height: 100px; width: 80px;" alt="a photo of attendees">
@@ -309,9 +365,17 @@
               </div>
           </div>
       </div>
+    </div>
   </div>
-      
-  </div>
+  <button id="backToTop" class="back-to-top">↑ back to top?</button>
 
+  <hr style="border: 3px solid black; width: 70%; margin: 0 auto; color: black;">
+  <footer style="min-height: 15vh;">
+    <p class="text-center">
+      &copy; Copyrights 2025 MLJI
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
